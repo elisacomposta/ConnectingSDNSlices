@@ -23,7 +23,7 @@
 <img src="https://user-images.githubusercontent.com/98694899/153768987-246ebf73-190a-48b1-8ac3-832fb7aaf4c5.jpg" width="50%" height="50%">
 
 
-<br>•The provider doesn’t want the slices to send UDP packets; s9 sends the inter-slices UDP packets to a server that filters (and then drops) the packets<br>
+<br>•**PLUS**:The provider doesn’t want the slices to send UDP packets; s9 sends the inter-slices UDP packets to a server that filters (and then drops) the packets<br>
 <br>
 ### TOPOLOGY<br>
 <img src="https://user-images.githubusercontent.com/98694899/153769039-62ec651f-a413-4250-b5c8-20fa28471f52.jpg" width="50%" height="50%">

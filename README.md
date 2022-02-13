@@ -29,8 +29,8 @@
 <img src="https://user-images.githubusercontent.com/98694899/153769039-62ec651f-a413-4250-b5c8-20fa28471f52.jpg" width="50%" height="50%">
 
 We realized three different slices (topology slicing):<br>
--**slice1**: a controller allows communication between: h1, h2, h5, h6<br>
--**slice2**: a controller allows communication between: h3, h4, h7, h8<br>
+-**slice1**: a controller allows the communication between: h1, h2, h5, h6<br>
+-**slice2**: a controller allows the communication between: h3, h4, h7, h8<br>
 -**connecting_slice**: a controller allows non-UDP packet inter-slices transmission, and filters UDP packet to server1 and server2 (if sent by slice1 or slice2 respectively)<br>
 <br>_Note_: server1 and server2 are configured not to send any packet. They can only receive UDP packets that are filtered by s9<br>
 <br>
@@ -44,7 +44,8 @@ We realized three different slices (topology slicing):<br>
 ```$ sudo python3 network.py```	#build the topology<br>
 
 **Set up the controllers** (in a new terminal)<br>
-```./runcontrollers.py```		#script to run all the controllers in a single shell<br>
+This script runs all the controllers in a single shell<br>
+```./runcontrollers.py```<br>
 
 Create a new terminal for future flow table test<br>
 

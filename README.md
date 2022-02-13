@@ -69,12 +69,12 @@ Show s4 flow table<br>
 ```$ sudo ovs-ofctl dump-flows s4```<br>
 <img src="https://user-images.githubusercontent.com/98694899/153769807-7fe49a24-de63-453c-a20b-c13f79780c2b.png" width="100%" height="100%">
 
-Host 1 can sand TCP packets to Host 4<br>
+Host 1 can send TCP packets to Host 4<br>
 ```mininet> h4 iperf -s &```<br>
 ```mininet> h1 iperf -c 10.0.0.4 -t 5 -i 1```<br>
 <img src="https://user-images.githubusercontent.com/98694899/153769940-f1cd07a1-a8a1-418e-af0c-e7e4bd2c4231.png" width="40%" height="40%">
 
-Host 1 cannot sand UDP packets to Host 3<br>
+Host 1 cannot send UDP packets to Host 3<br>
 ```mininet> h3 iperf -s -u &```<br>
 ```mininet> h1 iperf -c -u 10.0.0.3 -u -t 5 -i 1```<br>
 <img src="https://user-images.githubusercontent.com/98694899/153769890-606e8440-030c-4cbb-8e5e-a7b023b3fe4a.png" width="40%" height="40%">

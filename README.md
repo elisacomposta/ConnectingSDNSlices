@@ -11,12 +11,12 @@
    - [Set up the controllers](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-controllers)<br>
    - [Test reachability](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#test-reachability)<br>
    - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#close-and-clean-up-everything)<br>
-- [2nd topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#2nd-topology)<br>
+   - [2nd topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#2nd-topology)<br>
  - [Statement](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#statement-general-idea-1)<br>
  - [Topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#topology-1)<br>
  - [Demo](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#demo-1)<br>
    - [Set up the environment](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-environment-1)<br>
-   - [Set up the topology in mininet](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-topology-in-mininet.1)<br>
+   - [Set up the topology in mininet](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-topology-in-mininet-1)<br>
    - [Set up the controllers](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-controllers-1)<br>
    - [Test reachability](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#test-reachability-1)<br>
    - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#close-and-clean-up-everything-1)<br>

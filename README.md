@@ -46,7 +46,7 @@
 <br>• Additionally, the provider doesn’t want a slice to send UDP packets to the other; s9 sends the inter-slices UDP packets to a server that filters (and then drops) the packets<br>
 <br>
 ### TOPOLOGY<br>
-<img src="https://user-images.githubusercontent.com/98694899/153769039-62ec651f-a413-4250-b5c8-20fa28471f52.jpg" width="50%" height="50%">
+<img src="https://user-images.githubusercontent.com/98694899/153897167-9b9c232f-a525-4c44-9329-8cfddc402f45.png" width="50%" height="50%">
 
 We realized three different slices (topology slicing):<br>
 - **slice1**: a controller allows the communication between: h1, h2, h5, h6<br>

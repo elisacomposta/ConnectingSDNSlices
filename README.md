@@ -36,12 +36,16 @@ We realized three different slices (topology slicing):<br>
 
 ### DEMO<br>
 **Set up the environment:**<br>
-```vagrant up comnetsemu	#start the VM up```<br>
-```vagrant ssh comnetsemu	#log into the VM```<br>
+Start the VM up```<br>
+```vagrant up comnetsemu<br>
+Log into the VM```<br>
+```vagrant ssh comnetsemu<br>
 
 **Set up the topology in mininet**<br>
-```$ sudo mn -c``` 			#flush any previous configuration<br>
-```$ sudo python3 network.py```	#build the topology<br>
+Flsh any previous configuration<br>
+```$ sudo mn -c```<br>
+Build the topology<br>
+```$ sudo python3 network.py```<br>
 
 **Set up the controllers** (in a new terminal)<br>
 This script runs all the controllers in a single shell<br>

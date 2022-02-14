@@ -11,7 +11,8 @@
    - [Set up the controllers](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-controllers)<br>
    - [Test reachability](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#test-reachability)<br>
    - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#close-and-clean-up-everything)<br>
-   - [2nd topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#2nd-topology)<br>
+
+[2nd topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#2nd-topology)<br>
  - [Statement](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#statement-general-idea-1)<br>
  - [Topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#topology-1)<br>
  - [Demo](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#demo-1)<br>
@@ -24,33 +25,33 @@
 
 
 ### COMPONENTS USED<br>
-•**Open vSwitch**<br>
-•**RYU controller**: defined in ComNetsEmu<br>
-•**Host and switches**: defined in ComNetsEmu<br>
-•**OpenFlow 1.0** (both RYU controllers and OvSwitches need to be set up working with this version)<br>
+• **Open vSwitch**<br>
+• **RYU controller**: defined in ComNetsEmu<br>
+• **Host and switches**: defined in ComNetsEmu<br>
+• **OpenFlow 1.0** (both RYU controllers and OvSwitches need to be set up working with this version)<br>
 
 
 ## 1st topology
 
 ### STATEMENT (GENERAL IDEA)<br>
-•Here we have a cycle. Every host can communicate with the others, but when a flood starts we enter in an infinite loop.
+• Here we have a cycle. Every host can communicate with the others, but when a flood starts we enter in an infinite loop.
 <img src="https://user-images.githubusercontent.com/98694899/153767602-b65255fd-3629-4aeb-96d0-10c3fbfa93dc.jpg" width="30%" height="30%">
 
-<br>•A topology slicing avoids infinite loops by separating the cycle into two trees, controlled by two controllers; the two slices cannot communicate <br>
+<br>• A topology slicing avoids infinite loops by separating the cycle into two trees, controlled by two controllers; the two slices cannot communicate <br>
 <img src="https://user-images.githubusercontent.com/98694899/153768938-7c482ef2-37e2-470a-ac6d-09e848209593.jpg" width="30%" height="30%">
 
-<br>•We interconnected the two slices by adding a common root (s9); a third controller manages inter-slices communication<br>
+<br>• We interconnected the two slices by adding a common root (s9); a third controller manages inter-slices communication<br>
 <img src="https://user-images.githubusercontent.com/98694899/153833287-51bb54d8-f1d5-4a97-a9f4-b2ff06432ff0.jpeg" width="50%" height="50%">
 
-<br>•Additionally, the provider doesn’t want a slice to send UDP packets to the other; s9 sends the inter-slices UDP packets to a server that filters (and then drops) the packets<br>
+<br>• Additionally, the provider doesn’t want a slice to send UDP packets to the other; s9 sends the inter-slices UDP packets to a server that filters (and then drops) the packets<br>
 <br>
 ### TOPOLOGY<br>
 <img src="https://user-images.githubusercontent.com/98694899/153769039-62ec651f-a413-4250-b5c8-20fa28471f52.jpg" width="50%" height="50%">
 
 We realized three different slices (topology slicing):<br>
--**slice1**: a controller allows the communication between: h1, h2, h5, h6<br>
--**slice2**: a controller allows the communication between: h3, h4, h7, h8<br>
--**connecting_slice**: a controller allows non-UDP packet inter-slices transmission, and filters UDP packet to server1 and server2 (if sent by slice1 or slice2 respectively)<br>
+- **slice1**: a controller allows the communication between: h1, h2, h5, h6<br>
+- **slice2**: a controller allows the communication between: h3, h4, h7, h8<br>
+- **connecting_slice**: a controller allows non-UDP packet inter-slices transmission, and filters UDP packet to server1 and server2 (if sent by slice1 or slice2 respectively)<br>
 <br>_Note_: server1 and server2 are configured not to send any packet. They can only receive UDP packets that are filtered by s9<br>
 <br>
 
@@ -121,21 +122,22 @@ It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM w
 ## 2nd topology
 
 ### STATEMENT (GENERAL IDEA)<br>
-•Here we have two separate networks.<br>
+• Here we have two separate networks.<br>
 <img src="" width="30%" height="30%">
 
-<br>•We performed a topology slicing in each network. We also wanted to connect two slices with a third one.<br>
+<br>• We performed a topology slicing in each network. We also wanted to connect two slices with a third one.<br>
 _Note_: 2 slices remain separated, and use their own logic (see the image below).<br>
 <br>
 ### TOPOLOGY<br>
-<img src="" width="50%" height="50%">
+<img src="https://user-images.githubusercontent.com/98694899/153890925-31f73514-98f1-458e-922e-30124fe12b22.png" width="100%" height="100%">
+
 
 We realized five different slices:<br>
--**left_up**: a controller allows the communication between: h1, h2<br>
--**left_down**: a controller allows the communication between: h3, h4. Each packet follows a specific path<br>
---**right_up**: a controller allows the communication between: h5, h6, h7. The path depends on the packet protocol (service slicing)<br>
--**right_down**: a controller allows the communication between: h8, h9, h10, h11, h12, h13, h14<br>
--**connecting_slice**: a controller allows the communication between the slices _left_up_ and _right_down_<br>
+- **left_up**: a controller allows the communication between: h1, h2<br>
+- **left_down**: a controller allows the communication between: h3, h4. Each packet follows a specific path<br>
+- **right_up**: a controller allows the communication between: h5, h6, h7. The path depends on the packet protocol (service slicing)<br>
+- **right_down**: a controller allows the communication between: h8, h9, h10, h11, h12, h13, h14<br>
+- **connecting_slice**: a controller allows the communication between the slices _left_up_ and _right_down_<br>
 <br>_Note_: _left_down_ slice contains a loop; this doesn't cause any problem since each packet follows a specific path<br>
 <br>
 

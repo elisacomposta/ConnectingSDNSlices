@@ -1,7 +1,18 @@
 # ConnectingSlices
 
 ### TABLE OF CONTENTS<br>
-#indice
+[Components used](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#components-used)<br>
+[1st topology](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#1st-topology)<br>
+ - [Statement](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#statement-general-idea)<br>
+ - [Topology](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#topology)<br>
+ - [Demo](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#demo)<br>
+   - [Set up the environment](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#set-up-the-environment)<br>
+   - [Set up the topology in mininet](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#set-up-the-topology-in-mininet)<br>
+   - [Set up the controllers](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#set-up-the-controllers)<br>
+   - [Test reachability](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#test-reachability)<br>
+   - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#close-and-clean-everything-up)<br>
+
+
 
 ### COMPONENTS USED<br>
 •**Open vSwitch**<br>
@@ -35,25 +46,25 @@ We realized three different slices (topology slicing):<br>
 <br>
 
 ### DEMO<br>
-**Set up the environment:**<br>
-Start the VM up```<br>
-```vagrant up comnetsemu```<br>
-Log into the VM```<br>
-```vagrant ssh comnetsemu<br>
-
-**Set up the topology in mininet**<br>
+#### Set up the environment<br>
+Start the VM up<br>
+```vagrant up comnetsemu```<br><br>
+Log into the VM<br>
+```vagrant ssh comnetsemu```<br>
+<br>
+#### Set up the topology in mininet<br>
 Flsh any previous configuration<br>
-```$ sudo mn -c```<br>
+```$ sudo mn -c```<br><br>
 Build the topology<br>
 ```$ sudo python3 network.py```<br>
-
-**Set up the controllers** (in a new terminal)<br>
-This script runs all the controllers in a single shell<br>
+<br>
+#### Set up the controllers
+In a new terminal, run this script to start all the controllers in a single shell<br>
 ```./runcontrollers.py```<br>
-
+<br>
 Create a new terminal for future flow table test<br>
-
-**Test reachability**<br>
+<br>
+#### Test reachability<br>
 By running  ```mininet> pingall```  we obtain the following result:<br>
 <img src="https://user-images.githubusercontent.com/98694899/153769411-7121dee2-2ae4-4369-9dd4-355b68d1915d.png" width="30%" height="30%">
 _Note_: ping and pingall send ICMP packets.<br>
@@ -87,8 +98,6 @@ Host 1 cannot send UDP packets to Host 3<br>
 Show s9 flow table (path depends on protocol)<br>
 ```$ sudo ovs-ofctl dump-flows s9```<br>
 <img src="https://user-images.githubusercontent.com/98694899/153770285-680e26cf-61c8-4198-a31a-6316ea2802c2.png" width="100%" height="100%">
-
-
-
-**Close and clean everything up**<br>
+<br><br>
+#### Close and clean everything up<br>
 It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM with  ```vagrant halt comnetsemu```	

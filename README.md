@@ -1,7 +1,7 @@
 # ConnectingSlices
 
 ### TABLE OF CONTENTS<br>
-[Components used](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#components-used)<br>
+[Components used](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#components-used)<br>
 [1st topology](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#1st-topology)<br>
  - [Statement](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#statement-general-idea)<br>
  - [Topology](https://github.com/elisacomposta/ConnectingSlices/edit/main/README.md#topology)<br>

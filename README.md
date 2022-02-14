@@ -1,4 +1,4 @@
-# ConnectingSDNSlices
+# Connecting SDN Slices
 
 ### TABLE OF CONTENTS<br>
 [Components used](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#components-used)<br>

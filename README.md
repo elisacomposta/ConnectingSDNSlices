@@ -64,7 +64,7 @@ Log into the VM<br>
 ```vagrant ssh comnetsemu```<br>
 <br>
 #### Set up the topology in mininet<br>
-Flash any previous configuration<br>
+Flush any previous configuration<br>
 ```$ sudo mn -c```<br><br>
 Build the topology<br>
 ```$ sudo python3 network.py```<br>

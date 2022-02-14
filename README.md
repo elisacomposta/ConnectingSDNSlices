@@ -143,12 +143,6 @@ We realized five different slices:<br>
 <br>
 
 ### DEMO<br>
-#### Set up the environment<br>
-Start up the VM<br>
-```vagrant up comnetsemu```<br><br>
-Log into the VM<br>
-```vagrant ssh comnetsemu```<br>
-<br>
 #### Set up the topology in mininet<br>
 Flsh any previous configuration<br>
 ```$ sudo mn -c```<br><br>

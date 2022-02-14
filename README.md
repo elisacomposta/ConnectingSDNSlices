@@ -10,7 +10,7 @@
    - [Set up the topology in mininet](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-topology-in-mininet)<br>
    - [Set up the controllers](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-controllers)<br>
    - [Test reachability](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#test-reachability)<br>
-   - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#close-and-clean-everything-up)<br>
+   - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#close-and-clean-up-everything)<br>
 
 
 
@@ -47,7 +47,7 @@ We realized three different slices (topology slicing):<br>
 
 ### DEMO<br>
 #### Set up the environment<br>
-Start the VM up<br>
+Start up the VM<br>
 ```vagrant up comnetsemu```<br><br>
 Log into the VM<br>
 ```vagrant ssh comnetsemu```<br>
@@ -99,5 +99,5 @@ Show s9 flow table (path depends on protocol)<br>
 ```$ sudo ovs-ofctl dump-flows s9```<br>
 <img src="https://user-images.githubusercontent.com/98694899/153770285-680e26cf-61c8-4198-a31a-6316ea2802c2.png" width="100%" height="100%">
 <br><br>
-#### Close and clean everything up<br>
+#### Close and clean up everything<br>
 It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM with  ```vagrant halt comnetsemu```	

@@ -11,6 +11,15 @@
    - [Set up the controllers](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-controllers)<br>
    - [Test reachability](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#test-reachability)<br>
    - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#close-and-clean-up-everything)<br>
+- [2nd topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#2nd-topology)<br>
+ - [Statement](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#statement-general-idea)<br>
+ - [Topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#topology)<br>
+ - [Demo](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#demo)<br>
+   - [Set up the environment](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-environment)<br>
+   - [Set up the topology in mininet](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-topology-in-mininet)<br>
+   - [Set up the controllers](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-controllers)<br>
+   - [Test reachability](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#test-reachability)<br>
+   - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#close-and-clean-up-everything)<br>
 
 
 
@@ -99,5 +108,57 @@ Show s9 flow table (path depends on protocol)<br>
 ```$ sudo ovs-ofctl dump-flows s9```<br>
 <img src="https://user-images.githubusercontent.com/98694899/153770285-680e26cf-61c8-4198-a31a-6316ea2802c2.png" width="100%" height="100%">
 <br><br>
+#### Close and clean up everything<br>
+It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM with  ```vagrant halt comnetsemu```	
+
+
+
+
+
+
+
+
+## 2st topology
+
+### STATEMENT (GENERAL IDEA)<br>
+•Here we have two separate networks.<br>
+<img src="" width="30%" height="30%">
+
+<br>•We performed a topology slicing in each network. We also wanted to connect two slices with a third one.<br>
+_Note_: 2 slices remain separated, and use their own logic (see the image below).<br>
+<br>
+### TOPOLOGY<br>
+<img src="" width="50%" height="50%">
+
+We realized five different slices:<br>
+-**left_up**: a controller allows the communication between: h1, h2<br>
+-**left_down**: a controller allows the communication between: h3, h4. Each packet follows a specific path<br>
+--**right_up**: a controller allows the communication between: h5, h6, h7. The path depends on the packet protocol (service slicing)<br>
+-**right_down**: a controller allows the communication between: h8, h9, h10, h11, h12, h13, h14<br>
+-**connecting_slice**: a controller allows the communication between the slices _left_up_ and _right_down_<br>
+<br>_Note_: _left_down_ slice contains a loop; this doesn't cause any problem since each packet follows a specific path<br>
+<br>
+
+### DEMO<br>
+#### Set up the environment<br>
+Start up the VM<br>
+```vagrant up comnetsemu```<br><br>
+Log into the VM<br>
+```vagrant ssh comnetsemu```<br>
+<br>
+#### Set up the topology in mininet<br>
+Flsh any previous configuration<br>
+```$ sudo mn -c```<br><br>
+Build the topology<br>
+```$ sudo python3 network.py```<br>
+<br>
+#### Set up the controllers
+In a new terminal, run this script to start all the controllers in a single shell<br>
+```./runcontrollers.py```<br>
+<br>
+Create a new terminal for future flow table test<br>
+<br>
+#### Test reachability<br>
+
 #### Close and clean up everything<br>
 It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM with  ```vagrant halt comnetsemu```	

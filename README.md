@@ -37,7 +37,7 @@ We realized three different slices (topology slicing):<br>
 ### DEMO<br>
 **Set up the environment:**<br>
 Start the VM up```<br>
-```vagrant up comnetsemu<br>
+```vagrant up comnetsemu```<br>
 Log into the VM```<br>
 ```vagrant ssh comnetsemu<br>
 

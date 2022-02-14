@@ -20,10 +20,9 @@
 <img src="https://user-images.githubusercontent.com/98694899/153768938-7c482ef2-37e2-470a-ac6d-09e848209593.jpg" width="30%" height="30%">
 
 <br>•We interconnected the two slices by adding a common root (s9); a third controller manages inter-slices communication<br>
-<img src="https://user-images.githubusercontent.com/98694899/153768987-246ebf73-190a-48b1-8ac3-832fb7aaf4c5.jpg" width="50%" height="50%">
+<img src="https://user-images.githubusercontent.com/98694899/153833287-51bb54d8-f1d5-4a97-a9f4-b2ff06432ff0.jpeg" width="50%" height="50%">
 
-
-<br>•**PLUS**:The provider doesn’t want the slices to send UDP packets; s9 sends the inter-slices UDP packets to a server that filters (and then drops) the packets<br>
+<br>•Additionally, the provider doesn’t want a slice to send UDP packets to the other; s9 sends the inter-slices UDP packets to a server that filters (and then drops) the packets<br>
 <br>
 ### TOPOLOGY<br>
 <img src="https://user-images.githubusercontent.com/98694899/153769039-62ec651f-a413-4250-b5c8-20fa28471f52.jpg" width="50%" height="50%">
@@ -34,6 +33,7 @@ We realized three different slices (topology slicing):<br>
 -**connecting_slice**: a controller allows non-UDP packet inter-slices transmission, and filters UDP packet to server1 and server2 (if sent by slice1 or slice2 respectively)<br>
 <br>_Note_: server1 and server2 are configured not to send any packet. They can only receive UDP packets that are filtered by s9<br>
 <br>
+
 ### DEMO<br>
 **Set up the environment:**<br>
 ```vagrant up comnetsemu	#start the VM up```<br>

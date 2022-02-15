@@ -77,16 +77,16 @@ Create a new terminal for future flow table test<br>
 <br>
 #### Test reachability<br>
 By running  ```mininet> pingall```  we obtain the following result:<br>
-<img src="https://user-images.githubusercontent.com/98694899/153769411-7121dee2-2ae4-4369-9dd4-355b68d1915d.png" width="30%" height="30%">
+<img src="https://user-images.githubusercontent.com/98694899/153769411-7121dee2-2ae4-4369-9dd4-355b68d1915d.png" width="30%" height="30%"><br>
 _Note_: ping and pingall send ICMP packets.<br>
 _Note_: server1 and server2 never send and receive ICMP packets<br>
 
 Perform ping between host 1 and host 2<br>
-```mininet> h1 ping h2```<br>
+```mininet> h1 ping -c3 h2```<br>
 <img src="https://user-images.githubusercontent.com/98694899/153769590-d612d838-37de-40ea-aab7-c5e69427884a.png" width="60%" height="60%">
 
 Perform ping between host 3 and host 4<br>
-```mininet> h3 ping h4```<br>
+```mininet> h3 ping -c3 h4```<br>
 <img src="https://user-images.githubusercontent.com/98694899/153769600-5a9740c9-7ab2-4820-8cff-3872887ca61d.png" width="60%" height="60%">
 <br><br>
 Intra-slice communication works correctly.<br>
@@ -103,7 +103,7 @@ Host 1 can send TCP packets to Host 4<br>
 Host 1 cannot send UDP packets to Host 3<br>
 ```mininet> h3 iperf -s -u &```<br>
 ```mininet> h1 iperf -c -u 10.0.0.3 -u -t 5 -i 1```<br>
-<img src="https://user-images.githubusercontent.com/98694899/153769890-606e8440-030c-4cbb-8e5e-a7b023b3fe4a.png" width="40%" height="40%">
+<img src="https://user-images.githubusercontent.com/98689485/154041334-74617265-4e63-4636-892f-4f749507aeee.png" width="40%" height="40%">
 
 	
 Show s9 flow table (path depends on protocol)<br>

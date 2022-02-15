@@ -122,7 +122,6 @@ It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM w
 
 
 ## 2nd topology
-**ciao**<br>
 
 ### STATEMENT (GENERAL IDEA)<br>
 • Here we have two separate networks.<br>
@@ -143,6 +142,7 @@ We realized five different slices:<br>
 - **connecting_slice**: a controller allows the communication between the slices _control_office_ and _computer_room_<br>
 <br>_Note_: _office1_ slice contains a loop; this doesn't cause any problem since each packet follows a specific path<br>
 <br>
+**ciao**<br>
 
 ### DEMO<br>
 #### Set up the topology in mininet<br>

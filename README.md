@@ -122,6 +122,7 @@ It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM w
 
 
 ## 2nd topology
+**ciao**<br>
 
 ### STATEMENT (GENERAL IDEA)<br>
 • Here we have two separate networks.<br>

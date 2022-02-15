@@ -134,10 +134,10 @@ _Note_: 2 slices remain separated, and use their own logic (see the image below)
 
 
 We realized five different slices:<br>
-- **left_up**: a controller allows the communication between: h1, h2<br>
-- **left_down**: a controller allows the communication between: h3, h4. Each packet follows a specific path<br>
-- **right_up**: a controller allows the communication between: h5, h6, h7. The path depends on the packet protocol (service slicing)<br>
-- **right_down**: a controller allows the communication between: h8, h9, h10, h11, h12, h13, h14<br>
+- **control_office**: a controller allows the communication between: h1, h2<br>
+- **office1**: a controller allows the communication between: h3, h4. Each packet follows a specific path<br>
+- **office2**: a controller allows the communication between: h5, h6, h7. The path depends on the packet protocol (service slicing)<br>
+- **computer_room**: a controller allows the communication between: h8, h9, h10, h11, h12, h13, h14<br>
 - **connecting_slice**: a controller allows the communication between the slices _left_up_ and _right_down_<br>
 <br>_Note_: _left_down_ slice contains a loop; this doesn't cause any problem since each packet follows a specific path<br>
 <br>

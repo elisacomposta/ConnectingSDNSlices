@@ -1,26 +1,26 @@
 # Connecting SDN Slices
 
 ### TABLE OF CONTENTS<br>
-[Components used](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#components-used)<br>
-[1st topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#1st-topology)<br>
- - [Statement](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#statement-general-idea)<br>
- - [Topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#topology)<br>
- - [Demo](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#demo)<br>
-   - [Set up the environment](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-environment)<br>
-   - [Set up the topology in mininet](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-topology-in-mininet)<br>
-   - [Set up the controllers](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-controllers)<br>
-   - [Test reachability](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#test-reachability)<br>
-   - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#close-and-clean-up-everything)<br>
+[Components used](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#components-used)<br>
+[1st topology](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#1st-topology)<br>
+ - [Statement](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#statement-general-idea)<br>
+ - [Topology](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#topology)<br>
+ - [Demo](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#demo)<br>
+   - [Set up the environment](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#set-up-the-environment)<br>
+   - [Set up the topology in mininet](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#set-up-the-topology-in-mininet)<br>
+   - [Set up the controllers](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#set-up-the-controllers)<br>
+   - [Test reachability](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#test-reachability)<br>
+   - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#close-and-clean-up-everything)<br>
 
-[2nd topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#2nd-topology)<br>
- - [Statement](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#statement-general-idea-1)<br>
- - [Topology](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#topology-1)<br>
- - [Demo](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#demo-1)<br>
-   - [Set up the environment](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-environment-1)<br>
-   - [Set up the topology in mininet](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-topology-in-mininet-1)<br>
-   - [Set up the controllers](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#set-up-the-controllers-1)<br>
-   - [Test reachability](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#test-reachability-1)<br>
-   - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSlices/blob/main/README.md#close-and-clean-up-everything-1)<br>
+[2nd topology](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#2nd-topology)<br>
+ - [Statement](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#statement-general-idea-1)<br>
+ - [Topology](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#topology-1)<br>
+ - [Demo](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#demo-1)<br>
+   - [Set up the environment](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#set-up-the-environment-1)<br>
+   - [Set up the topology in mininet](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#set-up-the-topology-in-mininet-1)<br>
+   - [Set up the controllers](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#set-up-the-controllers-1)<br>
+   - [Test reachability](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#test-reachability-1)<br>
+   - [Close and clean everything up](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/README.md#close-and-clean-up-everything-1)<br>
 
 
 
@@ -48,6 +48,7 @@
 ### TOPOLOGY<br>
 <img src="https://user-images.githubusercontent.com/98694899/154034712-90fce033-2d10-49f8-9502-3fadf188d858.png" width="100%" height="100%">
 To see further details see [1st_topology](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/1st_topology.png)<br>
+[Set up the environment](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/1st_topology.png)
 
 We realized three different slices (topology slicing):<br>
 - **slice1**: a controller allows the communication between: h1, h2, h5, h6<br>
@@ -155,7 +156,6 @@ In a new terminal, run this script to start all the controllers in a single shel
 <br>
 Create a new terminal for future flow table test<br>
 <br>
-#### Test reachability<br>
 #### Test reachability<br>
 By running  ```mininet> pingall```  we obtain the following result:<br>
 <img src="https://user-images.githubusercontent.com/98689485/154036606-263c34d0-8db7-4765-a118-04ac63ca1fad.png" width="30%" height="30%">

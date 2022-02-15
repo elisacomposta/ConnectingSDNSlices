@@ -34,7 +34,7 @@
 ## 1st topology
 
 ### STATEMENT (GENERAL IDEA)<br>
-• Here we have a cycle. Every host can communicate with the others, but when a flood starts we enter in an infinite loop.<br>
+• Here we have a cycle. Every host can communicate with the others, but when a flood starts we enter in an infinite loop<br>
 <img src="https://user-images.githubusercontent.com/98694899/153767602-b65255fd-3629-4aeb-96d0-10c3fbfa93dc.jpg" width="30%" height="30%">
 
 <br>• A topology slicing avoids infinite loops by separating the cycle into two trees, controlled by two controllers; the two slices cannot communicate <br>
@@ -149,7 +149,7 @@ _Note_: _office1_ slice contains a loop; this doesn't cause any problem since ea
 
 ### DEMO<br>
 #### Set up the topology in mininet<br>
-Flsh any previous configuration<br>
+Flush any previous configuration<br>
 ```$ sudo mn -c```<br><br>
 Build the topology<br>
 ```$ sudo python3 network.py```<br>
@@ -207,7 +207,7 @@ Host 5 send TCP packets to Host 7<br>
 Show s8 flow table<br>
 ```$ sudo ovs-ofctl dump-flows s8```<br>
 <img src="https://user-images.githubusercontent.com/98689485/154041830-157b75ee-a1ff-417b-bf6c-8c03b1795962.png" width="100%" height="100%"><br>
-In this switch we also save the packet type so that a packet can choose the correct entry depending on that<br>
+This switch also saves the packet type so that a packet can choose the correct entry depending on that<br>
 
 Show s10 flow table<br>
 ```$ sudo ovs-ofctl dump-flows s10```<br>

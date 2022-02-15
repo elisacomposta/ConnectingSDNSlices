@@ -88,7 +88,7 @@ Perform ping between host 1 and host 2<br>
 
 Perform ping between host 3 and host 4<br>
 ```mininet> h3 ping -c3 h4```<br>
-<img src="https://user-images.githubusercontent.com/98694899/153769600-5a9740c9-7ab2-4820-8cff-3872887ca61d.png" width="60%" height="60%">
+<img src="https://user-images.githubusercontent.com/98689485/154051445-bc7f9811-df7d-4ff7-8dba-cd908d810eda.png" width="60%" height="60%">
 <br><br>
 Intra-slice communication works correctly.<br>
 

@@ -98,7 +98,7 @@ class SimpleSwitch(app_manager.RyuApp):
         
 
         if out_port==0 or (not pkt.get_protocol(udp.udp) and (dst in self.servers)):
-            #drop packets recieved from servers (they are backup servers)
+            #drop packets recieved from servers (they are filter servers)
             return
 
         actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]

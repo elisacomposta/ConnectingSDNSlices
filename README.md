@@ -34,7 +34,7 @@
 ## 1st topology
 
 ### STATEMENT (GENERAL IDEA)<br>
-• Here we have a cycle. Every host can communicate with the others, but when a flood starts we enter in an infinite loop.
+• Here we have a cycle. Every host can communicate with the others, but when a flood starts we enter in an infinite loop.<br>
 <img src="https://user-images.githubusercontent.com/98694899/153767602-b65255fd-3629-4aeb-96d0-10c3fbfa93dc.jpg" width="30%" height="30%">
 
 <br>• A topology slicing avoids infinite loops by separating the cycle into two trees, controlled by two controllers; the two slices cannot communicate <br>
@@ -166,9 +166,17 @@ Perform ping between host 1 and host 2<br>
 
 Perform ping between host 3 and host 4<br>
 ```mininet> h3 ping h4```<br>
-<img src="https://user-images.githubusercontent.com/98689485/154036785-cd23669e-032d-4213-8db0-41d8d34f3db9.png " width="40%" height="40%">
-<br><br>
+<img src="https://user-images.githubusercontent.com/98689485/154036785-cd23669e-032d-4213-8db0-41d8d34f3db9.png " width="40%" height="40%"><br>
+
 Intra-slice communication works correctly.<br>
+
+Show s3 flow table<br>
+```$ sudo ovs-ofctl dump-flows s3```<br>
+<img src="https://user-images.githubusercontent.com/98689485/154037351-3b76435e-d190-42e7-a43a-f2f0b2eb819c.png" width="100%" height="100%"><br>
+
+Show s4 flow table<br>
+```$ sudo ovs-ofctl dump-flows s4```<br>
+<img src="https://user-images.githubusercontent.com/98689485/154037460-4078aa8a-64c5-401b-976c-b6047457d42f.png" width="100%" height="100%"><br>
 
 #### Close and clean up everything<br>
 It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM with  ```vagrant halt comnetsemu```	

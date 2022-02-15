@@ -203,7 +203,7 @@ Host 5 send TCP packets to Host 7<br>
 Show s8 flow table<br>
 ```$ sudo ovs-ofctl dump-flows s8```<br>
 <img src="https://user-images.githubusercontent.com/98689485/154041830-157b75ee-a1ff-417b-bf6c-8c03b1795962.png" width="100%" height="100%"><br>
-In this switch, we also save a column with the packet type, so depending on that, a packet choose the correct entry<br>
+In this switch we also save the packet type so that a packet can choose the correct entry depending on that<br>
 
 Show s10 flow table<br>
 ```$ sudo ovs-ofctl dump-flows s10```<br>

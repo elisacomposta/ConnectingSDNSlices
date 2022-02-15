@@ -184,7 +184,7 @@ Perform ping between host 2 and host 11<br>
 
 Also inter-slice communication works correctly (passing through connecting_slice).<br><br>
 
-Now let's test the reacheability in the office2, depending on the packet type<br>
+Now let's test the reachability in the office2, depending on the packet type<br>
 
 Perform ping between host 5 and host 7 (ICMP packets)<br>
 ```mininet> h5 ping h7```<br>

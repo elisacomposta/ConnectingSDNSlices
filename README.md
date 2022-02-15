@@ -130,15 +130,13 @@ It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM w
 <br>• We performed a topology slicing in each network. We also wanted to connect two slices with a third one.<br>
 _Note_: 2 slices remain separated, and use their own logic (see the image below).<br>
 <br>
-**ciao**<br>
+
 ### TOPOLOGY<br>
-**ciao**<br>
-<img src="https://user-images.githubusercontent.com/98694899/154034840-1564d1c8-4b3d-4a97-b68a-2bf67caede40.png" width="100%" height="100%">
-**ciao**<br>
+
+<img src="https://user-images.githubusercontent.com/98694899/154034840-1564d1c8-4b3d-4a97-b68a-2bf67caede40.png" width="100%" height="100%"><br>
 
 To see further details see <a href="https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/2nd_topology.png">2nd_topology</a>
 <br>
-**ciao**<br>
 
 We realized five different slices:<br>
 - **control_office**: a controller allows the communication between: h1, h2<br>

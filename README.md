@@ -132,8 +132,10 @@ _Note_: 2 slices remain separated, and use their own logic (see the image below)
 <br>
 ### TOPOLOGY<br>
 <img src="https://user-images.githubusercontent.com/98694899/154034840-1564d1c8-4b3d-4a97-b68a-2bf67caede40.png" width="100%" height="100%">
+**ciao**<br>
 To see further details see <a href="https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/2nd_topology.png">2nd_topology</a>
 <br>
+**ciao**<br>
 We realized five different slices:<br>
 - **control_office**: a controller allows the communication between: h1, h2<br>
 - **office1**: a controller allows the communication between: h3, h4. Each packet follows a specific path<br>
@@ -142,7 +144,6 @@ We realized five different slices:<br>
 - **connecting_slice**: a controller allows the communication between the slices _control_office_ and _computer_room_<br>
 <br>_Note_: _office1_ slice contains a loop; this doesn't cause any problem since each packet follows a specific path<br>
 <br>
-**ciao**<br>
 
 ### DEMO<br>
 #### Set up the topology in mininet<br>

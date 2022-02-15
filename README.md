@@ -200,5 +200,14 @@ Host 5 send TCP packets to Host 7<br>
 ```mininet> h5 iperf -c 10.0.0.7 -b 7M -t 10 -i 1```<br>
 <img src="https://user-images.githubusercontent.com/98689485/154039572-a943c9c3-3eda-4e49-8ce3-83158912a24f.png" width="40%" height="40%">
 
+Show s8 flow table<br>
+```$ sudo ovs-ofctl dump-flows s8```<br>
+<img src="https://user-images.githubusercontent.com/98689485/154041830-157b75ee-a1ff-417b-bf6c-8c03b1795962.png" width="100%" height="100%"><br>
+In this switch, we also save a column with the packet type, so depending on that, a packet choose the correct entry<br>
+
+Show s10 flow table<br>
+```$ sudo ovs-ofctl dump-flows s10```<br>
+<img src="https://user-images.githubusercontent.com/98689485/154042119-2182702b-b3ae-487f-83cb-3deb88a188b5.png" width="100%" height="100%"><br>
+
 #### Close and clean up everything<br>
 It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM with  ```vagrant halt comnetsemu```	

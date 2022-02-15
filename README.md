@@ -139,7 +139,7 @@ We realized five different slices:<br>
 - **office2**: a controller allows the communication between: h5, h6, h7. The path depends on the packet protocol (service slicing)<br>
 - **computer_room**: a controller allows the communication between: h8, h9, h10, h11, h12, h13, h14<br>
 - **connecting_slice**: a controller allows the communication between the slices _left_up_ and _right_down_<br>
-<br>_Note_: _left_down_ slice contains a loop; this doesn't cause any problem since each packet follows a specific path<br>
+<br>_Note_: _office1_ slice contains a loop; this doesn't cause any problem since each packet follows a specific path<br>
 <br>
 
 ### DEMO<br>
@@ -177,6 +177,18 @@ Show s3 flow table<br>
 Show s4 flow table<br>
 ```$ sudo ovs-ofctl dump-flows s4```<br>
 <img src="https://user-images.githubusercontent.com/98689485/154037460-4078aa8a-64c5-401b-976c-b6047457d42f.png" width="100%" height="100%"><br>
+
+Perform ping between host 2 and host 11<br>
+```mininet> h2 ping h11```<br>
+<img src="https://user-images.githubusercontent.com/98689485/154038013-6194deb8-7fba-447f-ab78-6aac3a24a6c1.png" width="40%" height="40%"><br>
+
+Also inter-slice communication works correctly (passing through connecting_slice).<br><br>
+
+Now let's test the reacheability in the office2, depending on the packet type<br>
+
+Perform ping between host 5 and host 7 (ICMP packets)<br>
+```mininet> h5 ping h7```<br>
+<img src="https://user-images.githubusercontent.com/98689485/154038489-f832991b-49d7-4541-80d8-9c4780722c08.png" width="40%" height="40%"><br>
 
 #### Close and clean up everything<br>
 It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM with  ```vagrant halt comnetsemu```	

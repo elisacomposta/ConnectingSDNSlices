@@ -139,7 +139,7 @@ We realized five different slices:<br>
 - **office1**: a controller allows the communication between: h3, h4. Each packet follows a specific path<br>
 - **office2**: a controller allows the communication between: h5, h6, h7. The path depends on the packet protocol (service slicing)<br>
 - **computer_room**: a controller allows the communication between: h8, h9, h10, h11, h12, h13, h14<br>
-- **connecting_slice**: a controller allows the communication between the slices _left_up_ and _right_down_<br>
+- **connecting_slice**: a controller allows the communication between the slices _control_office_ and _computer_room_<br>
 <br>_Note_: _office1_ slice contains a loop; this doesn't cause any problem since each packet follows a specific path<br>
 <br>
 

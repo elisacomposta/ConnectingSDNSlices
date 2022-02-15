@@ -156,6 +156,19 @@ In a new terminal, run this script to start all the controllers in a single shel
 Create a new terminal for future flow table test<br>
 <br>
 #### Test reachability<br>
+#### Test reachability<br>
+By running  ```mininet> pingall```  we obtain the following result:<br>
+<img src="https://user-images.githubusercontent.com/98689485/154036606-263c34d0-8db7-4765-a118-04ac63ca1fad.png" width="30%" height="30%">
+
+Perform ping between host 1 and host 2<br>
+```mininet> h1 ping h2```<br>
+<img src="https://user-images.githubusercontent.com/98689485/154036720-28756291-41ab-4fae-a07b-857fbfe87347.png" width="40%" height="40%"><br>
+
+Perform ping between host 3 and host 4<br>
+```mininet> h3 ping h4```<br>
+<img src="https://user-images.githubusercontent.com/98689485/154036785-cd23669e-032d-4213-8db0-41d8d34f3db9.png " width="40%" height="40%">
+<br><br>
+Intra-slice communication works correctly.<br>
 
 #### Close and clean up everything<br>
 It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM with  ```vagrant halt comnetsemu```	

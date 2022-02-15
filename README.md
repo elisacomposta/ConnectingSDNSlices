@@ -157,14 +157,14 @@ Create a new terminal for future flow table test<br>
 <br>
 #### Test reachability<br>
 By running  ```mininet> pingall```  we obtain the following result:<br>
-<img src="https://user-images.githubusercontent.com/98689485/154035124-545e2d1c-33fb-4c5f-8fc3-816e4c4679ac.png" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/98689485/154035124-545e2d1c-33fb-4c5f-8fc3-816e4c4679ac.png" width=30% height=30%>
 Perform ping between host 1 and host 2<br>
 ```mininet> h1 ping h2```<br>
-<img src= "https://user-images.githubusercontent.com/98689485/154035325-aebb22f1-3ce9-456c-80be-05938af5184d.png" width="60%" height="60%">
+<img src= "https://user-images.githubusercontent.com/98689485/154035325-aebb22f1-3ce9-456c-80be-05938af5184d.png" width="40%" height="40%">
 
 Perform ping between host 3 and host 4<br>
 ```mininet> h3 ping h4```<br>
-<img src="https://user-images.githubusercontent.com/98689485/154035528-e0e2976d-103b-423d-b711-92bd4e34c16d.png" width="60%" height="60%">
+<img src="https://user-images.githubusercontent.com/98689485/154035528-e0e2976d-103b-423d-b711-92bd4e34c16d.png" width="40%" height="40%">
 <br><br>
 Intra-slice communication works correctly.<br>
 

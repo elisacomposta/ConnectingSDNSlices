@@ -47,8 +47,8 @@
 <br>
 ### TOPOLOGY<br>
 <img src="https://user-images.githubusercontent.com/98694899/154034712-90fce033-2d10-49f8-9502-3fadf188d858.png" width="100%" height="100%">
-To see further details see [1st_topology](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/1st_topology.png)<br>
-[Set up the environment](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/1st_topology.png)
+To see further details see <a href="https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/1st_topology.png"  target="_blank>1st_topology</a>
+
 
 We realized three different slices (topology slicing):<br>
 - **slice1**: a controller allows the communication between: h1, h2, h5, h6<br>
@@ -132,7 +132,7 @@ _Note_: 2 slices remain separated, and use their own logic (see the image below)
 <br>
 ### TOPOLOGY<br>
 <img src="https://user-images.githubusercontent.com/98694899/154034840-1564d1c8-4b3d-4a97-b68a-2bf67caede40.png" width="100%" height="100%">
-
+To see further details see <a href="https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/1st_topology.png" target="_blank">2nd_topology</a>
 
 We realized five different slices:<br>
 - **control_office**: a controller allows the communication between: h1, h2<br>

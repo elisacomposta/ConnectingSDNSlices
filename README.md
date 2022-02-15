@@ -191,13 +191,13 @@ Perform ping between host 5 and host 7 (ICMP packets)<br>
 <img src="https://user-images.githubusercontent.com/98689485/154038489-f832991b-49d7-4541-80d8-9c4780722c08.png" width="40%" height="40%"><br>
 
 Host 5 send UDP packets to Host 7<br>
-```mininet> h7 iperf -s -u &```<br>
-```mininet> h5 iperf -c 10.0.0.7 -u -t 10 -i 1```<br>
+```mininet> h7 iperf -s -u -b 10M &```<br>
+```mininet> h5 iperf -c 10.0.0.7 -u -b 10M -t 10 -i 1```<br>
 <img src="https://user-images.githubusercontent.com/98689485/154039193-214d5261-aa2c-45f4-813b-ac77f5fe60f9.png" width="40%" height="40%">
 
 Host 5 send TCP packets to Host 7<br>
-```mininet> h7 iperf -s &```<br>
-```mininet> h5 iperf -c 10.0.0.7 -t 10 -i 1```<br>
+```mininet> h7 iperf -s -b 7M &```<br>
+```mininet> h5 iperf -c 10.0.0.7 -b 7M -t 10 -i 1```<br>
 <img src="https://user-images.githubusercontent.com/98689485/154039572-a943c9c3-3eda-4e49-8ce3-83158912a24f.png" width="40%" height="40%">
 
 #### Close and clean up everything<br>

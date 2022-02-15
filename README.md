@@ -161,11 +161,11 @@ By running  ```mininet> pingall```  we obtain the following result:<br>
 <img src="https://user-images.githubusercontent.com/98689485/154036606-263c34d0-8db7-4765-a118-04ac63ca1fad.png" width="30%" height="30%">
 
 Perform ping between host 1 and host 2<br>
-```mininet> h1 ping h2```<br>
+```mininet> h1 ping -c3 h2```<br>
 <img src="https://user-images.githubusercontent.com/98689485/154036720-28756291-41ab-4fae-a07b-857fbfe87347.png" width="40%" height="40%"><br>
 
 Perform ping between host 3 and host 4<br>
-```mininet> h3 ping h4```<br>
+```mininet> h3 ping -c3 h4```<br>
 <img src="https://user-images.githubusercontent.com/98689485/154036785-cd23669e-032d-4213-8db0-41d8d34f3db9.png " width="40%" height="40%"><br>
 
 Intra-slice communication works correctly.<br>
@@ -179,7 +179,7 @@ Show s4 flow table<br>
 <img src="https://user-images.githubusercontent.com/98689485/154037460-4078aa8a-64c5-401b-976c-b6047457d42f.png" width="100%" height="100%"><br>
 
 Perform ping between host 2 and host 11<br>
-```mininet> h2 ping h11```<br>
+```mininet> h2 ping -c3 h11```<br>
 <img src="https://user-images.githubusercontent.com/98689485/154038013-6194deb8-7fba-447f-ab78-6aac3a24a6c1.png" width="40%" height="40%"><br>
 
 Also inter-slice communication works correctly (passing through connecting_slice).<br><br>
@@ -187,7 +187,7 @@ Also inter-slice communication works correctly (passing through connecting_slice
 Now let's test the reachability in the office2, depending on the packet type<br>
 
 Perform ping between host 5 and host 7 (ICMP packets)<br>
-```mininet> h5 ping h7```<br>
+```mininet> h5 ping -c3 h7```<br>
 <img src="https://user-images.githubusercontent.com/98689485/154038489-f832991b-49d7-4541-80d8-9c4780722c08.png" width="40%" height="40%"><br>
 
 Host 5 send UDP packets to Host 7<br>

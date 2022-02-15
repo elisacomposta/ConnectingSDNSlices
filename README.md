@@ -47,7 +47,7 @@
 <br>
 ### TOPOLOGY<br>
 <img src="https://user-images.githubusercontent.com/98694899/154034712-90fce033-2d10-49f8-9502-3fadf188d858.png" width="100%" height="100%">
-To see further details see <a href="https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/1st_topology.png" target="_blank" >1st_topology</a>
+To see further details see <a href="https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/1st_topology.png">1st_topology</a>
 
 
 We realized three different slices (topology slicing):<br>

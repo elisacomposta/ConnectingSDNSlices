@@ -46,8 +46,8 @@
 <br>• Additionally, the provider doesn’t want a slice to send UDP packets to the other; s9 sends the inter-slices UDP packets to a server that filters (and then drops) the packets<br>
 <br>
 ### TOPOLOGY<br>
-<img src="https://user-images.githubusercontent.com/98694899/153898615-610865ea-533d-4d33-adb4-dfadedd08872.png" width="100%" height="100%">
-
+<img src="https://user-images.githubusercontent.com/98694899/154034712-90fce033-2d10-49f8-9502-3fadf188d858.png" width="100%" height="100%">
+To see further details see [1st_topology](https://github.com/elisacomposta/ConnectingSDNSlices/blob/main/1st_topology.png)<br>
 
 We realized three different slices (topology slicing):<br>
 - **slice1**: a controller allows the communication between: h1, h2, h5, h6<br>
@@ -130,7 +130,7 @@ It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM w
 _Note_: 2 slices remain separated, and use their own logic (see the image below).<br>
 <br>
 ### TOPOLOGY<br>
-<img src="https://user-images.githubusercontent.com/98694899/153898671-92a1e3d6-d222-4b0c-85b5-abb68531b319.png" width="100%" height="100%">
+<img src="https://user-images.githubusercontent.com/98694899/154034840-1564d1c8-4b3d-4a97-b68a-2bf67caede40.png" width="100%" height="100%">
 
 
 We realized five different slices:<br>
@@ -144,7 +144,7 @@ We realized five different slices:<br>
 
 ### DEMO<br>
 #### Set up the topology in mininet<br>
-Flush any previous configuration<br>
+Flsh any previous configuration<br>
 ```$ sudo mn -c```<br><br>
 Build the topology<br>
 ```$ sudo python3 network.py```<br>
@@ -156,17 +156,6 @@ In a new terminal, run this script to start all the controllers in a single shel
 Create a new terminal for future flow table test<br>
 <br>
 #### Test reachability<br>
-By running  ```mininet> pingall```  we obtain the following result:<br>
-<img src="https://user-images.githubusercontent.com/98689485/154035124-545e2d1c-33fb-4c5f-8fc3-816e4c4679ac.png" width=30% height=30%>
-Perform ping between host 1 and host 2<br>
-```mininet> h1 ping h2```<br>
-<img src= "https://user-images.githubusercontent.com/98689485/154035325-aebb22f1-3ce9-456c-80be-05938af5184d.png" width="40%" height="40%">
-
-Perform ping between host 3 and host 4<br>
-```mininet> h3 ping h4```<br>
-<img src="https://user-images.githubusercontent.com/98689485/154035528-e0e2976d-103b-423d-b711-92bd4e34c16d.png" width="40%" height="40%">
-<br><br>
-Intra-slice communication works correctly.<br>
 
 #### Close and clean up everything<br>
 It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM with  ```vagrant halt comnetsemu```	

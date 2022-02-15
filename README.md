@@ -46,7 +46,7 @@
 <br>• Additionally, the provider doesn’t want a slice to send UDP packets to the other; s9 sends the inter-slices UDP packets to a server that filters (and then drops) the packets<br>
 <br>
 ### TOPOLOGY<br>
-<img src="https://user-images.githubusercontent.com/98694899/153898615-610865ea-533d-4d33-adb4-dfadedd08872.png" width="100%" height="100%">
+<img src="https://user-images.githubusercontent.com/98694899/154034712-90fce033-2d10-49f8-9502-3fadf188d858.png" width="100%" height="100%">
 
 
 We realized three different slices (topology slicing):<br>
@@ -130,7 +130,7 @@ It’s better to flush the topology with  ```sudo mn -c```  and to stop the VM w
 _Note_: 2 slices remain separated, and use their own logic (see the image below).<br>
 <br>
 ### TOPOLOGY<br>
-<img src="https://user-images.githubusercontent.com/98694899/153898671-92a1e3d6-d222-4b0c-85b5-abb68531b319.png" width="100%" height="100%">
+<img src="https://user-images.githubusercontent.com/98694899/154034840-1564d1c8-4b3d-4a97-b68a-2bf67caede40.png" width="100%" height="100%">
 
 
 We realized five different slices:<br>

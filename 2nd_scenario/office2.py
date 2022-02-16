@@ -81,7 +81,7 @@ class SimpleSwitch(app_manager.RyuApp):
 
         dpid = datapath.id
         
-        self.logger.info("packet in %s %s %s %s", dpid, src, dst, msg.in_port)
+        self.logger.info("LOG packet in %s %s %s %s", dpid, src, dst, msg.in_port)
 
         if dpid==10 and (msg.in_port==2 or msg.in_port==3) and dst not in self.finals:
             return

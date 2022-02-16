@@ -71,7 +71,7 @@ class SimpleSwitch(app_manager.RyuApp):
 
         dpid = datapath.id
 
-        self.logger.info("packet in %s %s %s %s", dpid, src, dst, msg.in_port)
+        self.logger.info("LOG packet in %s %s %s %s", dpid, src, dst, msg.in_port)
 
         out_port = 0
         
